@@ -1,0 +1,106 @@
+.Admin {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    .content {
+        margin-top: 60px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        h2 {
+            font-weight: 400;
+            font-size: 32px;
+            text-align: center;
+        }
+        .items {
+            margin-top: 40px;
+        }
+    }
+}
+.AdminItem {
+    background-color: white;
+    width: 1000px;
+    margin-top: 20px;
+    &:first-child {
+        margin-top: 0;
+    }
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 1050px) {
+        width: 95vw;
+    }
+    p {
+        font-weight: 500;
+        margin-left: 20px;
+        font-size: 18px;
+    }
+    div {
+        margin-right: 20px;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #2a63ec;
+        border-radius: 50%;
+        h3 {
+            user-select: none;
+            line-height: 1;
+            font-size: 20px;
+            color: white;
+        }
+    }
+    
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+.login {
+    width: 500px;
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    h2 {
+        font-weight: 500;
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    input {
+        margin-top: 35px;
+            width: 90%;
+            height: 45px;
+            border: 1px solid black;
+            font-size: 18px;
+            padding: 6px;
+            outline: none;
+            transition: .2s;
+            // cursor: pointer;
+            &:focus {
+                border-color: #2a63ec;
+            }
+    }
+    button {
+        width: 70%;
+            height: 60px;
+            background-color: #2a63ec;
+            color: white;
+            font-size: 16px;
+            border-radius: 40px;
+            border: 0;
+            transition: .2s;
+            cursor: pointer;
+            margin-top: 25px;
+            &:hover {
+                background-color: black;
+            }
+    }
+}

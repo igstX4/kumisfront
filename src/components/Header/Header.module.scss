@@ -1,0 +1,56 @@
+.links {
+    display: flex;
+    h3 {
+        margin-left: 20px;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+.header {
+    background-color: white;
+    width: 100vw;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button {
+        border: 0;
+        background-color: transparent;
+        font-size: 42px;
+        margin-left: 40px;
+        cursor: pointer;
+
+    }
+    img {
+        height: 80px;
+        width: auto;
+    }
+    .items {
+        display: flex;
+        margin-right: 40px;
+        div {
+            margin-right: 20px;
+            background-color: #2a63ec;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            svg {
+                fill: white;
+                width: 30px;
+                height: 30px;
+            }
+        }
+        .insta {
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
