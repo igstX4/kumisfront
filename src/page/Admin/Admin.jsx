@@ -53,6 +53,8 @@ export const Admin = () => {
             if (data.token) {
                 localStorage.setItem('token', data.token)
                 setLogined(true)
+                fetchNumbers()
+
             }
         } catch (e) {
             console.log(e)
