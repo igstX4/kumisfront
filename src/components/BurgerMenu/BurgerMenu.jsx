@@ -1,8 +1,10 @@
+import { useState } from 'react';
+import { Modal } from '../Modal/Modal';
 import s from './BurgerMenu.module.scss'
 import { Link, animateScroll as scroll, scroller } from "react-scroll";
 
 export const BurgerMenu = ({ isOpened, setOpened }) => {
-
+    const [opened1, setOpened1] = useState(false)
     const handleClick = (to) => {
         setOpened()
         scroller.scrollTo(to, {
@@ -15,6 +17,8 @@ export const BurgerMenu = ({ isOpened, setOpened }) => {
     }
 
     return (
+        <>
+        <Modal isOpened={opened1} setOpened={() => setOpened1(!opened1)}/>
         <div className={`${s.BurgerMenu} ${isOpened ? s.active : ""}`}>
             <div className={s.top}>
                 <div className={s.topDiv}>
@@ -36,8 +40,9 @@ export const BurgerMenu = ({ isOpened, setOpened }) => {
                 </div>
             </div>
             <div className={s.bottom}>
-                <button>Заказать!</button>
+                <button onClick={() => setOpened1(!opened1)}>Заказать!</button>
             </div>
         </div>
+        </>
     )
 }
