@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import s from './Admin.module.scss'
 import instance from '../../axios'
+import axios from 'axios'
 
 const AdminItem = ({ number, id, update }) => {
 
@@ -31,6 +32,7 @@ export const Admin = () => {
 
             if (data.admin) {
                 setLogined(true)
+                fetchNumbers()
             }
         } catch (e) {
             console.log(e)
@@ -52,15 +54,14 @@ export const Admin = () => {
 
             if (data.token) {
                 localStorage.setItem('token', data.token)
-                setLogined(true)
+                instance.defaults.headers.Authorization = data.token
+                getMeFunc()
+                // console.log(data1)
             }
         } catch (e) {
             console.log(e)
         }
     }
-    useEffect(() => {
-        fetchNumbers()
-    }, [logined])
     useEffect(() => {
         getMeFunc()
         fetchNumbers()
